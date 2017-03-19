@@ -80,8 +80,6 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    # Remove hostname
-    #prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
@@ -189,8 +187,6 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  # Shorten pathname
-  #prompt_segment blue black '%~'
   prompt_segment blue black '%1~'
 }
 
