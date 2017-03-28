@@ -13,5 +13,5 @@ pyg() {
 }
 alias dog=pyg
 
-hilight() {highlight -O ansi $1 | perl -e 'print ++$i." $_" for <>'}
+hilight() {highlight -O ansi $1 | awk '{printf "%d\t%s\n", NR, $0}'}
 alias hl=hilight
