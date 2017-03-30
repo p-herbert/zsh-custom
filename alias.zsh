@@ -9,7 +9,7 @@ alias so='source ~/.zshrc'
 
 # Highlight file
 pyg() {
-    pygmentize -f terminal256 -O style=native -g $1 | perl -e 'print ++$i." $_" for <>'
+    pygmentize -f terminal256 -O style=native -g $1 | awk '{printf "%d\t%s\n", NR, $0}'
 }
 alias dog=pyg
 
