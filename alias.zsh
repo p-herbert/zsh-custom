@@ -13,5 +13,11 @@ pyg() {
 }
 alias dog=pyg
 
+# Kill process
+mykill() {
+    pg $1 | awk '{print $2}' | xargs kill -9
+}
+alias gkill=mykill
+
 hilight() {highlight -O ansi $1 | awk '{printf "%d\t%s\n", NR, $0}'}
 alias hl=hilight
