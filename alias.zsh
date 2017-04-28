@@ -30,6 +30,10 @@ alias gfind=dev-search
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama;
 
+function db {
+    mongod --port 3001 &;
+}
+
 function sunsama-app {
     cd $DEV_APP/meteor/sunsama-app;
     meteor npm install;
