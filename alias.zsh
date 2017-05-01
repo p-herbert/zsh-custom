@@ -28,7 +28,7 @@ dev-search() {
 alias gfind=dev-search
 
 # Start various Sunsama servers easily.
-export DEV_APP=~/Documents/Development/sunsama;
+export DEV_APP=~/Documents/Development/sunsama/meteor;
 
 function db {
     mongod --port 3001 &;
