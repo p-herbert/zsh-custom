@@ -35,7 +35,7 @@ function db {
 }
 
 function sunsama-app {
-    cd $DEV_APP/meteor/sunsama-app;
+    cd $DEV_APP/sunsama-app;
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
@@ -44,7 +44,7 @@ function sunsama-app {
     meteor;
 }
 function sunsama-notifs {
-    cd $DEV_APP/meteor/sunsama-notifications;
+    cd $DEV_APP/sunsama-notifications;
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
@@ -53,7 +53,7 @@ function sunsama-notifs {
     meteor --port 3002;
 }
 function sunsama-worker {
-    cd $DEV_APP/meteor/sunsama-worker;
+    cd $DEV_APP/sunsama-worker;
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
