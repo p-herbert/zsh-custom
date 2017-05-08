@@ -31,7 +31,8 @@ alias gfind=dev-search
 export DEV_APP=~/Documents/Development/sunsama/meteor;
 
 function db {
-    mongod --port 3001 &;
+    #mongod --master --port 3001 &;
+    mongod --oplogSize 8 --replSet meteor --port 3001 &;
 }
 
 function sunsama-app {
@@ -69,4 +70,13 @@ function sunsama-realcandy {
     export TZ=UTC;
     cd $DEV_APP; . venv-realcandy/bin/activate;
     cd realcandy; python -m web.webapp;
+}
+function sunsama-connector {
+    cd $DEV_APP/sunsama-connector;
+    meteor npm install;
+    export ENV=dev;
+    export TZ=UTC;
+    export MONGO_URL=mongodb://localhost:3001/meteor;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    meteor --port 3004;
 }
