@@ -29,13 +29,13 @@ alias gfind=dev-search
 
 alias lg=lnav
 alias pt=papertrail
-alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)' | lnav"
-alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)' | lnav"
-alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)' | lnav"
-alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION | lnav"
-alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION | lnav"
+alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)' | lnav -q"
+alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)' | lnav -q"
+alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)' | lnav -q"
+alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
+alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
 
-follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav; }
+follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav -q; }
 alias pt-tail=follow
 
 # Start various Sunsama servers easily.
