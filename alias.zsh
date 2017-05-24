@@ -49,8 +49,8 @@ function sunsama-notifs {
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
-    #export MONGO_URL=mongodb://localhost:3001/meteor;
-    #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    export MONGO_URL=mongodb://localhost:3001/meteor;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     meteor --port 3002;
 }
 function sunsama-worker {
@@ -58,14 +58,14 @@ function sunsama-worker {
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
-    #export MONGO_URL=mongodb://localhost:3001/meteor;
-    #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    export MONGO_URL=mongodb://localhost:3001/meteor;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     meteor --port 3003;
 }
 function sunsama-realcandy {
     export ENV=DEV;
-    #export MONGO_URL=mongodb://localhost:3001/meteor;
-    #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    export MONGO_URL=mongodb://localhost:3001/meteor;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     export PORT=8888;
     export TZ=UTC;
     cd $DEV_APP; . venv-realcandy/bin/activate;
@@ -76,7 +76,7 @@ function sunsama-connector {
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
-    #export MONGO_URL=mongodb://localhost:3001/meteor;
-    #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    export MONGO_URL=mongodb://localhost:3001/meteor;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     meteor --port 3004;
 }
