@@ -27,7 +27,7 @@ dev-search() {
 }
 alias gfind=dev-search
 
-alias lg=lnav
+alias lg='lnav -p'
 alias pt=papertrail
 alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)' | lnav -q"
 alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)' | lnav -q"
