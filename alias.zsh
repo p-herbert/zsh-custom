@@ -34,6 +34,9 @@ alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION suns
 alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)'"
 alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION"
 
+follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav; }
+alias pt-tail=follow
+
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama/meteor;
 
