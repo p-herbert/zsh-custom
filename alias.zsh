@@ -33,6 +33,7 @@ alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-me
 alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)'"
 alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)'"
 alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION"
+alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION"
 
 follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav; }
 alias pt-tail=follow
