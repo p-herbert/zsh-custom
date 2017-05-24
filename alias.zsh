@@ -27,6 +27,12 @@ dev-search() {
 }
 alias gfind=dev-search
 
+alias pt=papertrail
+alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)'"
+alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)'"
+alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)'"
+alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION"
+
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama/meteor;
 
