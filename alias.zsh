@@ -53,7 +53,7 @@ function sunsama-app {
     export TZ=UTC;
     #export MONGO_URL=mongodb://localhost:3001/meteor;
     #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor;
+    meteor | lnav -q;
 }
 function sunsama-notifs {
     cd $DEV_APP/sunsama-notifications;
@@ -62,7 +62,7 @@ function sunsama-notifs {
     export TZ=UTC;
     export MONGO_URL=mongodb://localhost:3001/meteor;
     export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3002;
+    meteor --port 3002 | lnav -q;
 }
 function sunsama-worker {
     cd $DEV_APP/sunsama-worker;
@@ -71,7 +71,7 @@ function sunsama-worker {
     export TZ=UTC;
     export MONGO_URL=mongodb://localhost:3001/meteor;
     export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3003;
+    meteor --port 3003 | lnav -q;
 }
 function sunsama-realcandy {
     export ENV=DEV;
@@ -89,5 +89,5 @@ function sunsama-connector {
     export TZ=UTC;
     export MONGO_URL=mongodb://localhost:3001/meteor;
     export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3004;
+    meteor --port 3004 | lnav -q;
 }
