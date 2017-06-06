@@ -7,6 +7,8 @@ alias pg=myFunc
 
 alias so='source ~/.zshrc'
 
+alias link='ln -s'
+
 # Highlight file
 pyg() {
     pygmentize -f terminal256 -O style=native -g $1 | awk '{printf "%d\t%s\n", NR, $0}'
