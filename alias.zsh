@@ -7,7 +7,7 @@ alias pg=myFunc
 
 alias so='source ~/.zshrc'
 
-lsn() { ls -la | awk '{if ($0~/[rwx]/) {"stat -f %A " $9 | getline k; print k,$0;} else {print;}}'; }
+lsn() { ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'; }
 
 alias link='ln -s'
 
