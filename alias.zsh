@@ -9,6 +9,8 @@ alias so='source ~/.zshrc'
 
 lsn() { ls -la | awk '{if ($0~/[rwx]/) {"stat -f %A " $9 | getline k; print k,$0;} else {print;}}'; }
 
+alias link='ln -s'
+
 # Highlight file
 pyg() {
     pygmentize -f terminal256 -O style=native -g $1 | awk '{printf "%d\t%s\n", NR, $0}'
