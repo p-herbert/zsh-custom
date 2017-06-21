@@ -9,6 +9,19 @@ alias so='source ~/.zshrc'
 
 lsn() { ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'; }
 
+replace() {
+    # Check for STDIN
+    if [ $# -ge 3 -a -f "$3" ];
+    then
+        sed -i '' "s/$1/$2/g" $3;
+    else
+        while read file
+            do
+                sed -i '' "s/$1/$2/g" $file;
+            done
+    fi
+}
+
 alias link='ln -s'
 
 # Highlight file
