@@ -40,7 +40,7 @@ hilight() {highlight -O ansi $1 | awk '{printf "%d\t%s\n", NR, $0}'}
 alias hl=hilight
 
 dev-search() {
-    find . \( -iname "*.js" -o -iname "*.jsx" \) -type f ! -path ".*/\.meteor/*" ! -path ".*/node_modules/*" | xargs ack $1
+    find . \( -iname "*.js" -o -iname "*.jsx" \) -type f ! -path ".*/\.meteor/*" ! -path ".*/node_modules/*" | xargs ack $@
 }
 alias gfind=dev-search
 
