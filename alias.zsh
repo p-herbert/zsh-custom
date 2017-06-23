@@ -55,6 +55,9 @@ alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION | tee /t
 follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav -q; }
 alias pt-tail=follow
 
+# Sunsama aliases
+alias hooks='ngrok http -subdomain=sunsama 3002'
+
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama/meteor;
 
