@@ -57,6 +57,7 @@ alias pt-tail=follow
 
 # Sunsama aliases
 alias hooks='ngrok http -subdomain=sunsama 3002'
+alias mtest='meteor test --driver-package practicalmeteor:mocha --port 3100 | lnav -q'
 
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama/meteor;
