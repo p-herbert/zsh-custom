@@ -10,6 +10,7 @@ alias so='source ~/.zshrc'
 lsn() { ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'; }
 
 alias link='ln -s'
+alias total='du -sh'
 
 # Highlight file
 pyg() {
