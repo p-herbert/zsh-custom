@@ -23,6 +23,8 @@ replace() {
 }
 
 alias link='ln -s'
+alias total='du -sh'
+alias size='du -h'
 
 # Highlight file
 pyg() {
