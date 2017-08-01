@@ -51,6 +51,7 @@ alias pt=papertrail
 alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)' | lnav -q"
 alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)' | lnav -q"
 alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)' | lnav -q"
+alias pt-notifications="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-notifications '(error OR warn)' | lnav -q"
 alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
 alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
 
