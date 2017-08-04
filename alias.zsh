@@ -75,8 +75,8 @@ function sunsama-app {
     meteor npm install;
     export ENV=dev;
     export TZ=UTC;
-    #export MONGO_URL=mongodb://localhost:3001/meteor;
-    #export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
+    [[ -n $MONGO_URL ]] && unset MONGO_URL;
+    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     meteor | lnav -q;
 }
 function sunsama-notifs {
