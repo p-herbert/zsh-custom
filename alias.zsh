@@ -9,6 +9,11 @@ alias so='source ~/.zshrc'
 
 lsn() { ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'; }
 
+gs() {
+    printf '%-6s | %-6s | %s\n' 'Number' 'Status' 'Filename';
+    git status -s | awk '{printf "%-6s | %-6s | %s\n", NR, $1, $2}';
+}
+
 replace() {
     # Check for STDIN
     if [ $# -ge 3 -a -f "$3" ];
@@ -48,12 +53,12 @@ alias gfind=dev-search
 
 alias lg='lnav -p'
 alias pt=papertrail
-alias pt-app="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-meteor '(error OR warn)' | lnav -q"
-alias pt-connector="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-connector '(error OR warn)' | lnav -q"
-alias pt-worker="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-worker '(error OR warn)' | lnav -q"
-alias pt-notifications="pt --min-time '24 hour ago' --force-color -- PRODUCTION sunsama-notifications '(error OR warn)' | lnav -q"
-alias pt-recent="pt --min-time '10 minute ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
-alias pt-today="pt --min-time '24 hour ago' --force-color -- PRODUCTION | tee /tmp/papertail.log | lnav -q"
+alias pt-app="pt --min-time '24 hour ago' --force-color -- -nginx -DEBUG sunsama-production | lnav -q"
+alias pt-connector="pt --min-time '24 hour ago' --force-color -- -nginx -DEBUG sunsama-connector | lnav -q"
+alias pt-worker="pt --min-time '24 hour ago' --force-color -- -nginx -DEBUG sunsama-connector | lnav -q"
+alias pt-notifications="pt --min-time '24 hour ago' --force-color -- -nginx -DEBUG sunsama-notifications | lnav -q"
+alias pt-recent="pt --min-time '10 minute ago' --force-color -- | tee /tmp/papertail.log | lnav -q"
+alias pt-today="pt --min-time '24 hour ago' --force-color -- | tee /tmp/papertail.log | lnav -q"
 
 follow() { papertrail -f --min-time '10 minute ago' -d 5 --force-color $* | lnav -q; }
 alias pt-tail=follow
