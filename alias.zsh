@@ -1,5 +1,6 @@
 # Use Homebrew vim
 alias vim='/usr/local/bin/vim'
+alias vi='vim'
 
 # Process Status
 myFunc() {ps aux | grep $1 | grep -v grep;}
