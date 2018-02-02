@@ -71,6 +71,9 @@ alias mtest='meteor test --driver-package practicalmeteor:mocha --port 3100 | ln
 # Start various Sunsama servers easily.
 export DEV_APP=~/Documents/Development/sunsama/meteor;
 
+# Start ngrok
+alias n-app='ngrok http 3000 --subdomain sunsama-dev-PeterHerbert > /dev/null &'
+
 function db {
     #mongod --master --port 3001 &;
     mongod --oplogSize 8 --replSet meteor --port 3001 &;
