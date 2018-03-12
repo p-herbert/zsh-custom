@@ -74,6 +74,9 @@ export DEV_APP=~/Documents/Development/sunsama/meteor;
 # Start ngrok
 alias n-app='ngrok http 3000 --subdomain sunsama-dev-PeterHerbert > /dev/null &'
 
+# Start ngrok
+alias n-pay='ngrok http 3002 --subdomain sunsama > /dev/null &'
+
 function db {
     #mongod --master --port 3001 &;
     mongod --oplogSize 8 --replSet meteor --port 3001 &;
