@@ -1,6 +1,7 @@
 alias vi='vim'
 
 alias adb='~/Library/Android/sdk/platform-tools/adb';
+alias tf='terraform'
 
 # Process Status
 myFunc() {ps aux | grep $1 | grep -v grep;}
