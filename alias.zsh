@@ -53,7 +53,7 @@ dev-search() {
 }
 alias gfind=dev-search
 
-alias lg='lnav -p'
+alias lg='lnav -q'
 alias pt=papertrail
 alias pt-app="pt --min-time '5 day ago' --force-color -- -nginx -DEBUG sunsama-production | lnav -q"
 alias pt-connector="pt --min-time '5 day ago' --force-color -- -nginx -DEBUG sunsama-connector | lnav -q"
