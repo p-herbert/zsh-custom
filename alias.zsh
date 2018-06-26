@@ -78,6 +78,9 @@ alias n-app='ngrok http 3000 --subdomain sunsama-dev-PeterHerbert > /dev/null &'
 # Start ngrok
 alias n-pay='ngrok http 3002 --subdomain sunsama > /dev/null &'
 
+# Start ngrok
+alias n-chat='ngrok http 3005 --subdomain sunsama-dev-PeterHerbert-chatbot > /dev/null &'
+
 function db {
     #mongod --master --port 3001 &;
     mongod --oplogSize 8 --replSet meteor --port 3001 &;
