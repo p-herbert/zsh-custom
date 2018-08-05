@@ -88,36 +88,25 @@ function db {
 }
 
 function sunsama-app {
-    cd $DEV_APP/sunsama-app;
-    meteor npm install;
-    export ENV=dev;
-    export TZ=UTC;
-    [[ -n $MONGO_URL ]] && unset MONGO_URL;
-    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor | lnav -q;
+    cd $DEV_APP;
+    ./dev_run_app.sh app | lnav -q;
 }
-function sunsama-notifs {
-    cd $DEV_APP/sunsama-notifications;
-    meteor npm install;
-    export ENV=dev;
-    export TZ=UTC;
-    export MONGO_URL=mongodb://localhost:3001/meteor;
-    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3002 | lnav -q;
+function sunsama-notifications {
+    cd $DEV_APP;
+    ./dev_run_app.sh notifications | lnav -q;
 }
 function sunsama-worker {
-    cd $DEV_APP/sunsama-worker;
-    meteor npm install;
-    export ENV=dev;
-    export TZ=UTC;
-    export MONGO_URL=mongodb://localhost:3001/meteor;
-    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3003 | lnav -q;
+    cd $DEV_APP;
+    ./dev_run_app.sh worker | lnav -q;
+}
+function sunsama-chatbot {
+    cd $DEV_APP;
+    ./dev_run_app.sh chatbot | lnav -q;
 }
 function sunsama-connector {
-    cd $DEV_APP/sunsama-connector;
-    meteor npm install;
-    export ENV=dev;
+    cd $DEV_APP;
+    ./dev_run_app.sh connector | lnav -q;
+}
     export TZ=UTC;
     export MONGO_URL=mongodb://localhost:3001/meteor;
     export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
