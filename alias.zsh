@@ -107,8 +107,7 @@ function sunsama-connector {
     cd $DEV_APP;
     ./dev_run_app.sh connector | lnav -q;
 }
-    export TZ=UTC;
-    export MONGO_URL=mongodb://localhost:3001/meteor;
-    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    meteor --port 3004 | lnav -q;
+function sunsama-websockets {
+    cd $DEV_APP;
+    ./dev_run_app.sh websockets | lnav -q;
 }
