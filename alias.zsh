@@ -114,15 +114,6 @@ function sunsama-worker {
     export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
     meteor --port 3003 | lnav -q;
 }
-function sunsama-realcandy {
-    export ENV=DEV;
-    export MONGO_URL=mongodb://localhost:3001/meteor;
-    export ALT_MONGO_URL=mongodb://localhost:3001/alt_data;
-    export PORT=8888;
-    export TZ=UTC;
-    cd $DEV_APP; . venv-realcandy/bin/activate;
-    cd realcandy; python -m web.webapp;
-}
 function sunsama-connector {
     cd $DEV_APP/sunsama-connector;
     meteor npm install;
