@@ -20,7 +20,7 @@ dog() {
 }
 
 # Kill process
-gfill() {
+gkill() {
     pg $1 | awk '{print $2}' | xargs kill -9
 }
 
