@@ -16,7 +16,7 @@ lsn() {
 
 # Highlight file
 dog() {
-    pygmentize -f terminal256 -O style=native -g $1 | awk '{printf "%d\t%s\n", NR, $0}'
+    pygmentize -f terminal256 -O style=native -g $1 | nl -v 0
 }
 
 # Kill process
@@ -25,6 +25,6 @@ gkill() {
 }
 
 hl() {
-    highlight -O ansi $1 | awk '{printf "%d\t%s\n", NR, $0}'
+    highlight -O ansi $1 | nl -v 0
 }
 
