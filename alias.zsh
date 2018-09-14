@@ -10,10 +10,6 @@ pg() {
     ps aux | grep $1 | grep -v grep
 }
 
-lsn() {
-    ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'
-}
-
 # Highlight file
 dog() {
     pygmentize -f terminal256 -O style=native -g $1 | nl -v 0
