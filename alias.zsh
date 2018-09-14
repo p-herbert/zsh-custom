@@ -9,6 +9,7 @@ lsn() { ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; clo
 alias link='ln -s'
 alias total='du -sh'
 alias size='du -h'
+alias di='diff -arq'
 
 # Highlight file
 pyg() {
