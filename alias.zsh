@@ -1,18 +1,18 @@
+# Aliases
+alias so='source ~/.zshrc'
+alias link='ln -s'
+alias total='du -sh'
+alias size='du -h'
+alias di='diff -arq'
+
 # Process Status
 pg() {
     ps aux | grep $1 | grep -v grep
 }
 
-alias so='source ~/.zshrc'
-
 lsn() {
     ls -la | awk '{if ($0~/[rwx]/) {fh="stat -f %A " $9; fh | getline k; close(fh); print k,$0;} else {print;}}'
 }
-
-alias link='ln -s'
-alias total='du -sh'
-alias size='du -h'
-alias di='diff -arq'
 
 # Highlight file
 dog() {
