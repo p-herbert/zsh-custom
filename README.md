@@ -6,4 +6,6 @@ These are my personal Oh-My-Zsh settings.
 
 Clone the repository
 
-        git clone https://github.com/p-herbert/zsh-custom.git $HOME/.zsh_custom
+~~~bash
+git clone https://github.com/p-herbert/zsh-custom.git $HOME/.zsh_custom
+~~~
