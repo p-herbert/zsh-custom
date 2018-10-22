@@ -6,7 +6,7 @@ alias size='du -h'
 alias di='diff -arq'
 
 # Load AWS
-source ./plugins/aws.zsh;
+source $ZSH_CUSTOM/plugins/aws.zsh;
 
 # Process status
 pg() {
