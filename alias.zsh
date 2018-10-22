@@ -5,6 +5,9 @@ alias total='du -sh'
 alias size='du -h'
 alias di='diff -arq'
 
+# Load AWS
+source ./plugins/aws.zsh;
+
 # Process status
 pg() {
     ps aux | grep $1 | grep -v grep
