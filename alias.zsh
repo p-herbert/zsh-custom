@@ -1,5 +1,5 @@
 # Aliases
-alias so='source ~/.zshrc'
+alias so='source $HOME/.zshrc'
 alias link='ln -s'
 alias total='du -sh'
 alias size='du -h'
