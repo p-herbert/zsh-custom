@@ -8,6 +8,9 @@ alias di='diff -arq'
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
 
+# Load Travis-CI
+source $ZSH_CUSTOM/plugins/travis-ci.zsh
+
 # Process status
 pg() {
     ps aux | grep $1 | grep -v grep
