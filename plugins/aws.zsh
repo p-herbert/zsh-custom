@@ -1,3 +1,7 @@
+# Environment Variables #
+#########################
+export AWS_PROFILE=pete
+
 # Amplify #
 ###########
 alias amp='amplify'
