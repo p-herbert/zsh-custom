@@ -4,6 +4,7 @@ alias link='ln -s'
 alias total='du -sh'
 alias size='du -h'
 alias di='diff -arq'
+alias v='vim'
 alias nv='nvim'
 
 # Load AWS
