@@ -4,6 +4,7 @@ alias link='ln -s'
 alias total='du -sh'
 alias size='du -h'
 alias di='diff -arq'
+alias nv='nvim'
 
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
