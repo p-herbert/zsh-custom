@@ -40,3 +40,9 @@ hl() {
 replace() {
     ack -l $1 | xargs sed -i "s/$1/$2/g"
 }
+
+# Simulate OSX's pbcopy and pbpaste
+if [ ! $(uname -s) = "Darwin" ]; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
