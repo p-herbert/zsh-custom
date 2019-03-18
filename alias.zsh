@@ -37,9 +37,15 @@ hl() {
 }
 
 # Replace
-replace() {
-    ack -l $1 | xargs sed -i "s/$1/$2/g"
-}
+if [ $(uname -s) = 'Darwin' ]; then
+    replace() {
+        ack -l $1 | xargs sed -i '' "s/$1/$2/g"
+    }
+elif then
+    replace() {
+        ack -l $1 | xargs sed -i "s/$1/$2/g"
+    }
+fi
 
 # Simulate OSX's pbcopy and pbpaste
 if [ ! $(uname -s) = "Darwin" ]; then
