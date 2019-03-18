@@ -16,6 +16,12 @@ source $ZSH_CUSTOM/plugins/travis-ci.zsh
 # Load NPM
 source $ZSH_CUSTOM/plugins/npm.zsh
 
+# Load OSX configurations
+[ $(uname -s) = 'Darwin' ] && source $ZSH_CUSTOM/os/osx.zsh
+
+# Load Ubuntu configurations
+[ $(uname -s) = 'Linux' ] && source $ZSH_CUSTOM/os/ubuntu.zsh
+
 # Process status
 pg() {
     ps aux | grep $1 | grep -v grep
@@ -35,20 +41,3 @@ dog() {
 hl() {
     highlight -O ansi $1 | nl -v 0
 }
-
-# Replace
-if [ $(uname -s) = 'Darwin' ]; then
-    replace() {
-        ack -l $1 | xargs sed -i '' "s/$1/$2/g"
-    }
-elif then
-    replace() {
-        ack -l $1 | xargs sed -i "s/$1/$2/g"
-    }
-fi
-
-# Simulate OSX's pbcopy and pbpaste
-if [ ! $(uname -s) = "Darwin" ]; then
-    alias pbcopy='xsel --clipboard --input'
-    alias pbpaste='xsel --clipboard --output'
-fi
