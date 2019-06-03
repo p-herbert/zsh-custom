@@ -16,6 +16,9 @@ source $ZSH_CUSTOM/plugins/travis-ci.zsh
 # Load NPM
 source $ZSH_CUSTOM/plugins/npm.zsh
 
+# Load Kubernetes
+source $ZSH_CUSTOM/plugins/kubernetes.zsh
+
 # Load OSX configurations
 [ $(uname -s) = 'Darwin' ] && source $ZSH_CUSTOM/os/osx.zsh
 
