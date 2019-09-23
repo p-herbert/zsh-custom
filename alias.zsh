@@ -6,6 +6,7 @@ alias size='du -h'
 alias di='diff -arq'
 alias v='vim'
 alias nv='nvim'
+alias key=ssh-keygen -l -E md5 -f
 
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
