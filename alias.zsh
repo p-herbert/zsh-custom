@@ -11,9 +11,6 @@ alias key=ssh-keygen -l -E md5 -f
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
 
-# Load Travis-CI
-source $ZSH_CUSTOM/plugins/travis-ci.zsh
-
 # Load NPM
 source $ZSH_CUSTOM/plugins/npm.zsh
 
