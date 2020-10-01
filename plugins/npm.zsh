@@ -1,5 +1,6 @@
+#######
 # NPM #
-#############
+#######
 alias n='npm'
 alias ng='npm install -g'
 alias ni='npm install'
