@@ -17,6 +17,9 @@ source $ZSH_CUSTOM/plugins/npm.zsh
 # Load Kubernetes
 source $ZSH_CUSTOM/plugins/kubernetes.zsh
 
+# Load Yubikey
+source $ZSH_CUSTOM/plugins/yubikey.zsh
+
 # Load .env
 [ -f $ZSH_CUSTOM/.env ] && source $ZSH_CUSTOM/.env
 
