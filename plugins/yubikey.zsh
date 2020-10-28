@@ -2,5 +2,8 @@
 # YubiKey #
 ###########
 function mfa() {
-  ykman oath code -s $1
+  token=$(ykman oath code -s $1)
+  echo "SUCCESS"
+  echo $token | pbcopy
+}
 }
