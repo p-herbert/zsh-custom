@@ -6,4 +6,3 @@ function mfa() {
   echo "SUCCESS"
   echo $token | pbcopy
 }
-}
