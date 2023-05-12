@@ -7,6 +7,7 @@ alias di='diff -arq'
 alias v='vim'
 alias nv='nvim'
 alias key=ssh-keygen -l -E md5 -f
+alias ts=date +'%Y%m%d%H%M%S'
 
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
