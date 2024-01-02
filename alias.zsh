@@ -8,6 +8,7 @@ alias v='vim'
 alias nv='nvim'
 alias key=ssh-keygen -l -E md5 -f
 alias ts='date +'%Y%m%d%H%M%S''
+alias proxy='ssh -D 1337 -f -C -q -N'
 
 # Load AWS
 source $ZSH_CUSTOM/plugins/aws.zsh;
